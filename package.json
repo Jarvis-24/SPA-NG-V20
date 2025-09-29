@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:SPA-ng-v20": "node dist/SPA-ng-v20/server/server.mjs",
-    "lint": "ng lint"
+    "lint": "ng lint --fix"
   },
   "prettier": {
     "printWidth": 100,
@@ -37,6 +37,10 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular-eslint/builder": "^20.3.0",
+    "@angular-eslint/eslint-plugin": "^20.3.0",
+    "@angular-eslint/eslint-plugin-template": "^20.3.0",
+    "@angular-eslint/template-parser": "^20.3.0",
     "@angular/build": "^20.3.3",
     "@angular/cli": "^20.3.3",
     "@angular/compiler-cli": "^20.3.0",

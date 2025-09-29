@@ -14,6 +14,7 @@ module.exports = tseslint.config(
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
+      ...angular.configs.templateAccessibility,
       eslintPluginPrettierRecommended,
     ],
     plugins: { prettier: prettierPlugin },
@@ -47,8 +48,11 @@ module.exports = tseslint.config(
     files: ['**/*.html'],
     extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
     rules: {
-      '@angular-eslint/template/accessibility-valid-aria': 'warn',
     },
+  },
+  {
+    files: ['**/*.component.ts'],
+    processor: angular.processInlineTemplates, // Only for component files
   },
   {
     files: ['**/*.spec.ts'],
