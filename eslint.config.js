@@ -8,6 +8,7 @@ const prettierPlugin = require('eslint-plugin-prettier');
 module.exports = tseslint.config(
   {
     files: ['**/*.ts'],
+    ignores: ['**/*.spec.ts'], // Ignore Angular spec files
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
